@@ -1,0 +1,491 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://api.usa.dev/",
+  "resourcePath": "directory_records",
+  "apis": [
+    {
+      "path": "api/v1/usagov/directory_records/federal.json",
+      "operations": [
+        {
+          "summary": "Fetches all federal records in the system",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Search content based on a string parameter",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "date_filter",
+              "type": "date_filter",
+              "description": "Supports all content updated since a date, or between two dates seperated by a comma",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "terms_filter",
+              "type": "term_filter",
+              "description": "Supports filtering for value of fields using key:value pairs seperated by '::', where values can be commas seperated",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "result_filter",
+              "type": "result_filter",
+              "description": "Filter result fields to provided list, defaults to returning all fields",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page_size",
+              "type": "integer",
+              "description": "Number of results per page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page number",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#federal"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/directory_records/bbb.json",
+      "operations": [
+        {
+          "summary": "Fetches all better business bureau records in the system",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Search content based on a string parameter",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "date_filter",
+              "type": "date_filter",
+              "description": "Supports all content updated since a date, or between two dates seperated by a comma",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "terms_filter",
+              "type": "term_filter",
+              "description": "Supports filtering for value of fields using key:value pairs seperated by '::', where values can be commas seperated",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "result_filter",
+              "type": "result_filter",
+              "description": "Filter result fields to provided list, defaults to returning all fields",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page_size",
+              "type": "integer",
+              "description": "Number of results per page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page number",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#bbb"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/directory_records/state/{state}.json",
+      "operations": [
+        {
+          "summary": "Fetches all records tied to a state in the system, also achievable using a terms_filter=state:state_acronym",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "state",
+              "type": "string",
+              "description": "Return directory records based on state",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Search content based on a string parameter",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "date_filter",
+              "type": "date_filter",
+              "description": "Supports all content updated since a date, or between two dates seperated by a comma",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "terms_filter",
+              "type": "term_filter",
+              "description": "Supports filtering for value of fields using key:value pairs seperated by '::', where values can be commas seperated",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "result_filter",
+              "type": "result_filter",
+              "description": "Filter result fields to provided list, defaults to returning all fields",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page_size",
+              "type": "integer",
+              "description": "Number of results per page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page number",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#state"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/directory_records/consumer_agencies.json",
+      "operations": [
+        {
+          "summary": "Fetches all records representing consumer agencies in the system",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Search content based on a string parameter",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "date_filter",
+              "type": "date_filter",
+              "description": "Supports all content updated since a date, or between two dates seperated by a comma",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "terms_filter",
+              "type": "term_filter",
+              "description": "Supports filtering for value of fields using key:value pairs seperated by '::', where values can be commas seperated",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "result_filter",
+              "type": "result_filter",
+              "description": "Filter result fields to provided list, defaults to returning all fields",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page_size",
+              "type": "integer",
+              "description": "Number of results per page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page number",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#consumer_agencies"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/directory_records/autocomplete.json",
+      "operations": [
+        {
+          "summary": "Powers autocomplete style lookup of names and locations of directory records",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "name",
+              "type": "string",
+              "description": "Search titles based on matching this string",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "directory_type",
+              "type": "string",
+              "description": "Matches a type in the directory record",
+              "required": true
+            },
+            {
+              "paramType": "query",
+              "name": "language",
+              "type": "string",
+              "description": "Match a English or Spanish directory record, defaults to English",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#autocomplete"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/directory_records.json",
+      "operations": [
+        {
+          "summary": "Fetches all directory records in the system",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Search content based on a string parameter",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "date_filter",
+              "type": "date_filter",
+              "description": "Supports all content updated since a date, or between two dates seperated by a comma",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "terms_filter",
+              "type": "term_filter",
+              "description": "Supports filtering for value of fields using key:value pairs seperated by '::', where values can be commas seperated",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "result_filter",
+              "type": "result_filter",
+              "description": "Filter result fields to provided list, defaults to returning all fields",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page_size",
+              "type": "integer",
+              "description": "Number of results per page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page number",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#index"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/directory_records/{id}.json",
+      "operations": [
+        {
+          "summary": "Fetches a specific directory record from the system",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Return directory record based on ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::DirectoryRecords#show"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+development:
+  log: true  # true/false
+  hosts: <%= ENV['CMP_RUBY_API_ELASTICSEARCH'] %>
+
+test:
+  log: true  # true/false
+  hosts: <%= ENV['CMP_RUBY_API_ELASTICSEARCH'] %>
+
+production:
+  log: true  # true/false
+  hosts: <%= ENV['CMP_RUBY_API_ELASTICSEARCH'] %>

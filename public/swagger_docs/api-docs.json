@@ -1,0 +1,43 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://api.usa.dev/",
+  "apis": [
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/text_assets.{format}",
+      "description": "Narrative Content"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/site_level_taxonomies.{format}",
+      "description": "SiteLevel Taxonomy Terms"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/agency_taxonomies.{format}",
+      "description": "Agency Taxonomy Terms"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/asset_taxonomies.{format}",
+      "description": "Asset Taxonomy Terms"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/multimedia_assets.{format}",
+      "description": "Multimedia Assets"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/state_details.{format}",
+      "description": "State Details"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/directory_records.{format}",
+      "description": "Directory Records"
+    },
+    {
+      "path": "https://api.usa.dev/swagger_docs/api/v1/pages.{format}",
+      "description": "Pages"
+    }
+  ],
+  "info": {
+    "title": "USAGov Platform API Interactive Documentation",
+    "description": "This is documentation for the <a href=\"https://www.usa.gov/explore\">USAGov</a> Platform API. In addition to this interactive documentation, we also have information on how to use the API available on <a href=\"https://github.com/usagov/USAGov-Platform-API-Documentation/wiki\">GitHub</a>."
+  }
+}

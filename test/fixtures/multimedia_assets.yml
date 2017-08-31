@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: multimedia_assets
+#
+#  id               :integer          not null, primary key
+#  node_id          :integer
+#  title            :string(255)
+#  summary          :text(65535)
+#  language         :string(255)
+#  media_type       :string(255)
+#  widget_code      :text(65535)
+#  high_res_version :string(255)
+#  status           :string(255)
+#  file_name        :string(255)
+#  file_location    :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

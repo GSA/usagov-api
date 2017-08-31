@@ -1,0 +1,1 @@
+json.set! :client_ip, @ip

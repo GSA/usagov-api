@@ -1,0 +1,125 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "https://api.usa.dev/",
+  "resourcePath": "multimedia_assets",
+  "apis": [
+    {
+      "path": "api/v1/usagov/multimedia_assets.json",
+      "operations": [
+        {
+          "summary": "Fetches all multimedia assets in the system",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "query",
+              "type": "string",
+              "description": "Search content based on a string parameter",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "date_filter",
+              "type": "date_filter",
+              "description": "Supports all content updated since a date, or between two dates seperated by a comma",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "terms_filter",
+              "type": "term_filter",
+              "description": "Supports filtering for exact value of fields using key:value pairs seperated by '::', where values can be commas seperated",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "result_filter",
+              "type": "result_filter",
+              "description": "Filter result fields to provided list, defaults to returning all fields",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page_size",
+              "type": "integer",
+              "description": "Number of results per page",
+              "required": false
+            },
+            {
+              "paramType": "query",
+              "name": "page",
+              "type": "integer",
+              "description": "Page number",
+              "required": false
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::MultimediaAssets#index"
+        }
+      ]
+    },
+    {
+      "path": "api/v1/usagov/multimedia_assets/{id}.json",
+      "operations": [
+        {
+          "summary": "Fetches a specific asset",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Return taxonomy term based on ID",
+              "required": true
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 200,
+              "responseModel": null,
+              "message": "Success"
+            },
+            {
+              "code": 404,
+              "responseModel": null,
+              "message": "Not Found"
+            },
+            {
+              "code": 406,
+              "responseModel": null,
+              "message": "The request you made is not acceptable"
+            },
+            {
+              "code": 500,
+              "responseModel": null,
+              "message": "Requested Range Not Satisfiable"
+            }
+          ],
+          "method": "get",
+          "nickname": "Api::V1::MultimediaAssets#show"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<h1>These test urls go off to api.data.gov for our staging environment.</h1>
+
+<p>They contain a demo key in the url.  This will have to be registered for through api.data.gov for production and enabled on the administrative end to give unlimited access (beyond rate controls).</p>
+
+<%= link_to "Root URL", "https://api.data.gov/gsa/cmp/STAGING/v1/usagov/narratives.json?api_key=nhDDY3PIS2OJtiFyAva27CItXCUmIKupE3N1VLc2&" %> <br/>
+
+
+<%= link_to "Documents since a given date (2014-11-10)", "https://api.data.gov/gsa/cmp/STAGING/v1/usagov/narratives.json?api_key=nhDDY3PIS2OJtiFyAva27CItXCUmIKupE3N1VLc2&date_filter=2014-11-10" %><br/>
+<%= link_to "Documents since a given date, but only a few fields", "https://api.data.gov/gsa/cmp/STAGING/v1/usagov/narratives.json?api_key=nhDDY3PIS2OJtiFyAva27CItXCUmIKupE3N1VLc2&date_filter=2014-11-10&result_filter=title,html,language" %><br/>
+<%= link_to "Text query for 'como'", "https://api.data.gov/gsa/cmp/STAGING/v1/usagov/narratives.json?api_key=nhDDY3PIS2OJtiFyAva27CItXCUmIKupE3N1VLc2&query=como" %><br/>
+<%= link_to "Documents with a text query, and a specified language", "https://api.data.gov/gsa/cmp/STAGING/v1/usagov/narratives.json?api_key=nhDDY3PIS2OJtiFyAva27CItXCUmIKupE3N1VLc2&query=como&terms_filter=language:es" %>

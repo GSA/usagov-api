@@ -1,0 +1,39 @@
+# db:
+#   image: mysql
+#   environment:
+#     - MYSQL_ROOT_PASSWORD=root
+# es:
+#   image: elasticsearch
+
+web:
+  build: .
+  command: bundle exec rails s -p 3000 -b '0.0.0.0'
+  volumes:
+    - .:/myapp
+  ports:
+    - "3000:3000"
+  # links:
+  #   - db
+  #   - es
+  extra_hosts:
+    - "MYSQL_DB_HOST:10.0.2.2"
+    - "elasticsearch:10.0.2.2"
+    - "usa.dev:172.17.42.1"
+    - "cmp.usa.dev:172.17.42.1"
+    - "api.usa.dev:127.0.0.1"
+    - "www.usa.dev:172.17.42.1"
+    - "gobierno.usa.dev:172.17.42.1"
+    - "kids.usa.dev:172.17.42.1"
+  environment:
+    - CMP_RUBY_API_DB_NAME=cmp_ruby_api_development
+    - CMP_RUBY_API_DB_HOST=mysql_server
+    - CMP_RUBY_API_DB_PORT=3306
+    - CMP_RUBY_API_DB_USER=root
+    - CMP_RUBY_API_DB_PASS=
+    - CMP_RUBY_API_ELASTICSEARCH="elasticsearch:9200"
+    - CMP_RUBY_API_API_PATH="https://api.usa.dev"
+    - CMP_RUBY_API_BASE_PATH="https://api.usa.dev"
+    - CMP_DRUPAL_HOST=cmp.usa.dev
+    - CMP_USAGOV_HOST=www.usa.dev
+    - CMP_GOBIERNOGOV_HOST=gobierno.usa.dev
+    - CMP_DRUPAL_SECRET_KEY="SSESS1c438bd10ce1ab851ba7403d8efa4517=vflai5UHU5b8tGocMY6vtDdAUGW8hl-QG9595XXpL1c"
