@@ -1,5 +1,5 @@
 //= require swagger/shred.bundle.js
-//= require swagger/jquery-1.8.0.min
+//= require swagger/jquery-1.12.4.min
 //= require swagger/jquery.slideto.min
 //= require swagger/jquery.wiggle.min
 //= require swagger/jquery.ba-bbq.min

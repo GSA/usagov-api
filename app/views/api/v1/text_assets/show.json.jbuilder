@@ -7,6 +7,11 @@ json.metadata do
 end
 json.result do 
   @results["hits"]["hits"].each do |result|
-    json.merge! result["_source"]
+
+    if result["_source"]["status"] == "Deleted"
+      json.merge! result["_source"].slice("id","title","status","created_at","updated_at","changed_at")
+    else
+      json.merge! result["_source"]
+    end
   end
 end

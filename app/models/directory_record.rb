@@ -68,6 +68,7 @@ class DirectoryRecord < ActiveRecord::Base
       json.donated_money self.donated_money
       json.government_branch self.government_branch
       json.phone_number self.phone_number
+      json.acronym self.acronym
       json.contact_links self.contact_links ? CGI.unescapeHTML(self.contact_links) : nil
       json.website_links self.website_links ? CGI.unescapeHTML(self.website_links) : nil
       json.created_at self.created_at
