@@ -1,0 +1,3 @@
+# USAGov Api
+# min   hour    day     month   weekday command
+#*       *       *       *       *       echo "API" &2>1 >> /proc/self/fd/2
